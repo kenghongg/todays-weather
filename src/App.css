@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: url(images/bg-dark.png) bottom center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 50px;
+
+  animation: animatedBackground 20s linear infinite;
+  -moz-animation: animatedBackground 20s linear infinite;
+  -webkit-animation: animatedBackground 20s linear infinite;
+  -ms-animation: animatedBackground 20s linear infinite;
+  -o-animation: animatedBackground 20s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes animatedBackground {
+  0% {
+    background-position: right center;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+@-moz-keyframes animatedBackground {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+@-webkit-keyframes animatedBackground {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+@-ms-keyframes animatedBackground {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+@-o-keyframes animatedBackground {
+  0% {
+    background-position: right center;
+  }
+  50% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+
+/* sun img animation */
+.animate-sun {
+  animation: animatedSun 5s linear infinite;
+}
+
+@keyframes animatedSun {
+  0% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* top search input placeholder */
+.animate-placeholder:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  animation: animatedType 9s linear infinite;
+}
+
+.animate-placeholder:hover:before,
+.animate-placeholder:focus:before {
+  /* display: none; */
+}
+
+@keyframes animatedType {
+  0% {
+    content: "";
+  }
+  3% {
+    content: "S|";
+  }
+  6% {
+    content: "Si";
+  }
+  9% {
+    content: "Sin|";
+  }
+  12% {
+    content: "Sing";
+  }
+  15% {
+    content: "Singa|";
+  }
+  18% {
+    content: "Singap";
+  }
+  21% {
+    content: "Singapo|";
+  }
+  24% {
+    content: "Singapor";
+  }
+  27% {
+    content: "Singapore|";
+  }
+  40% {
+    content: "";
+  }
+  43% {
+    content: "T|";
+  }
+  46% {
+    content: "To";
+  }
+  49% {
+    content: "Tok|";
+  }
+  52% {
+    content: "Toky";
+  }
+  55% {
+    content: "Tokyo|";
+  }
+  68% {
+    content: "";
+  }
+  71% {
+    content: "H|";
+  }
+  74% {
+    content: "Ha";
+  }
+  77% {
+    content: "Han|";
+  }
+  80% {
+    content: "Hano";
+  }
+  83% {
+    content: "Hanoi|";
+  }
+  100% {
+    content: "";
   }
 }
