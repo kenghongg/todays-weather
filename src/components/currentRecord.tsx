@@ -1,35 +1,13 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, Typography, Skeleton } from "@mui/material";
 import { IWeatherData } from "../interfaces/weatherDataInterface";
 
 const CurrentRecord = ({ weatherData }: { weatherData: IWeatherData | null }) => {
   const [loading, setLoading] = useState(true);
-  // const [weatherData, setWeatherData] = useState<IWeatherData | null>(null);
-  const [responseData, setResponseData] = useState("");
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setLoading(true);
-  //     try {
-  //       const response = await fetch(
-  //         "https://api.openweathermap.org/data/2.5/weather?q=Singapore&APPID=a063206cd1e2e981cc372caeb328128b"
-  //       );
-  //       const data = await response.json();
-  //       setWeatherData(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     } finally {
-  //       setTimeout(() => {
-  //         setLoading(false);
-  //       }, 2000);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   return (
     <>

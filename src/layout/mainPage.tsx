@@ -3,16 +3,19 @@ import React from "react";
 import Header from "../components/header";
 import TopSearch from "../components/topSearch";
 
-import ContentContainer from "../components/contentContainer";
-import { Container } from "@mui/material";
+import { Container, ThemeProvider } from "@mui/material";
+// import theme from "../theme";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const MainPage = () => {
+  const [darkMode, toggleDarkMode, theme] = useDarkMode();
   return (
-    <Container maxWidth='md'>
-      <Header />
-      <TopSearch />
-      {/* <ContentContainer /> */}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="md">
+        <Header />
+        <TopSearch />
+      </Container>
+    </ThemeProvider>
   );
 };
 

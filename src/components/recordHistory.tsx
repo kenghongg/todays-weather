@@ -8,9 +8,7 @@ import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 const RecordHistoryBox = styled(Box)({
-  // marginTop: 40,
   borderRadius: 16,
-  // background: "#2A2442",
   background: "rgba(26,26,26,0.5)",
   backdropFilter: "blur(20px)",
   padding: theme.spacing(1.5),

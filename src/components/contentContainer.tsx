@@ -12,7 +12,6 @@ import { useEffect, useState } from "react";
 const ContentBox = styled(Box)({
   marginTop: 70,
   borderRadius: 20,
-  // background: "#533994",
   background: "rgba(26,26,26,0.3)",
   backdropFilter: "blur(20px)",
   padding: theme.spacing(2),
@@ -24,7 +23,6 @@ const ContentBox = styled(Box)({
 });
 
 const SearchHistoryBox = styled(Box)({
-  // background: "#3A2D6B",
   background: "rgba(26,26,26,0.2)",
   backdropFilter: "blur(20px)",
   marginTop: theme.spacing(2),
@@ -83,8 +81,6 @@ const ContentContainer = ({ weatherData }: { weatherData: IWeatherData | null })
   };
 
   const handleSearch = (city: string) => {
-    // console.log(city);
-
     const _APPID = "a063206cd1e2e981cc372caeb328128b";
     const encodedSearchTerm = encodeURIComponent(city);
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodedSearchTerm}&APPID=${_APPID}`;
@@ -105,7 +101,6 @@ const ContentContainer = ({ weatherData }: { weatherData: IWeatherData | null })
 
   return (
     <ContentBox>
-      {/* {console.log(searchHistory[0][0].search)} */}
       <Box>
         <SunShadowImg src={sunShadowImgPng} className="animate-sun" />
         <SunImg src={sunImgPng} />

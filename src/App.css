@@ -1,15 +1,23 @@
 body {
-  background: url(images/bg-dark.png) bottom center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
   padding-bottom: 50px;
+  background: url(images/bg-light.png) bottom center no-repeat;
 
-  animation: animatedBackground 20s linear infinite;
-  -moz-animation: animatedBackground 20s linear infinite;
-  -webkit-animation: animatedBackground 20s linear infinite;
-  -ms-animation: animatedBackground 20s linear infinite;
-  -o-animation: animatedBackground 20s linear infinite;
+  animation: animatedBackground 30s ease-out infinite;
+  -moz-animation: animatedBackground 30s ease-out infinite;
+  -webkit-animation: animatedBackground 30s ease-out infinite;
+  -ms-animation: animatedBackground 30s ease-out infinite;
+  -o-animation: animatedBackground 30s ease-out infinite;
+}
+
+body.dark-mode{
+  background: url(images/bg-dark.png) bottom center no-repeat;
+}
+
+body.light-mode{
+  /* background: url(images/bg-light.png) bottom center no-repeat; */
 }
 
 @keyframes animatedBackground {
