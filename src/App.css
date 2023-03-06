@@ -3,6 +3,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   padding-bottom: 50px;
+  transition: 0.3s all;
   background: url(images/bg-light.png) bottom center no-repeat;
 
   animation: animatedBackground 30s ease-out infinite;
@@ -12,11 +13,11 @@ body {
   -o-animation: animatedBackground 30s ease-out infinite;
 }
 
-body.dark-mode{
+body.dark-mode {
   background: url(images/bg-dark.png) bottom center no-repeat;
 }
 
-body.light-mode{
+body.light-mode {
   /* background: url(images/bg-light.png) bottom center no-repeat; */
 }
 
